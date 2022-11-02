@@ -13,11 +13,13 @@ function App() {
     <main className="App">
       {user ? (
         <>
+          {/* <NavBar user={user} /> */}
           <NavBar user={user} />
           <Routes>
             <Route path="/orders/new" element={<NewOrderPage />} />
             <Route path="/orders/" element={<OrderHistoryPage/>} />
           </Routes>
+         
         </>
       ) : (
         <AuthPage />
