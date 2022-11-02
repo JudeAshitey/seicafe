@@ -1,10 +1,13 @@
 import SignUpForm from './../components/SignUpForm';
+import { useState } from 'react';
 
-const AuthPage = () => {
+const AuthPage = ({setUser}) => {
+    const [showSignUp, setShowSignUp] = useState(true);
     return (
     <main>
     <h1>AuthPage</h1>
-    <SignUpForm />
+    <SignUpForm  setUser = {setUser}/>
+    
   </main>
 );
     

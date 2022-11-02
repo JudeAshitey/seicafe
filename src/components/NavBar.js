@@ -2,16 +2,17 @@
 import { Link, } from "react-router-dom";
 // Using the import below, we can call any exported function using: userService.someMethod()
 import * as userService from '../utilities/users-service';
+import { useState } from 'react';
 
 
-const NavBar = ({user}) => {
+const NavBar = ({user},{setUser}) => {
 
 
-   const handleLogOut = ()=>{
+   const handleLogOut = ({setUser})=>{
       // Delegate to the users-service 
       userService.logOut();
        //Update state will also cause a re-render   
-      //  setUser(null);
+       setUser(null);
    }
 
   return (
