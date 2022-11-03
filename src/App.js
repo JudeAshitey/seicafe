@@ -22,10 +22,12 @@ function App() {
          
         </>
       ) : (
-        <AuthPage setUser = {setUser} />
+        <AuthPage setUser={setUser} />
       )}
     </main>
   );
 }
 
 export default App;
+
+//The SignUp function would need to be redirected.
