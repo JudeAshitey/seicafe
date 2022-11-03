@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { signUp } from '../utilities/users-service';
+import LoginForm from './LoginForm';
 
 export default class SignUpForm extends Component {
     state = {
@@ -53,6 +54,7 @@ export default class SignUpForm extends Component {
               </form>
             </div>
             <p className="error-message">&nbsp;{this.state.error}</p>
+           <LoginForm/>
           </div>
         );
       }

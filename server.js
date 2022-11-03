@@ -6,23 +6,23 @@ const favicon = require('serve-favicon');
 
 const path = require('path');
 
-const logger = require('morgan');
+// const logger = require('morgan');
 
 require('dotenv').config();
 
 require('./config/database');
 
-const app = express()
+const app = express();
 const PORT = process.env.PORT || 3001;
 
 //middleware
-app.use(morgan('dev'))
-app.use(express.json())
-app.use(favicon(path.join(__dirname,'build','favicon.ico')))
-app.use(express.static(path.join(__dirname, 'build')))
 
+app.use(morgan('dev'));
+app.use(express.json());
+app.use(favicon(path.join(__dirname,'build','favicon.ico')));
+app.use(express.static(path.join(__dirname, 'build')));
 
-
+app.use(require('./config/checkToken'));
 
 
 

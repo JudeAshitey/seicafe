@@ -1,5 +1,6 @@
 import SignUpForm from './../components/SignUpForm';
 import { useState } from 'react';
+import LoginForm from '../components/LoginForm';
 
 const AuthPage = ({setUser}) => {
     const [showSignUp, setShowSignUp] = useState(true);
@@ -7,6 +8,8 @@ const AuthPage = ({setUser}) => {
     <main>
     <h1>AuthPage</h1>
     <SignUpForm  setUser={setUser}/>
+   
+    <LoginForm/>
     
   </main>
 );
